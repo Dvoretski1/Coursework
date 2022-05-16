@@ -1,0 +1,25 @@
+﻿<Window x:Class="Coursework.Views.Windows.LoginWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coursework.Views.Windows"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="RegistrationWindows" Height="550" Width="800">
+    <Grid Background="#ffdadada">
+        <Border MinWidth="250" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="450" CornerRadius="20">
+            <StackPanel>
+                <TextBlock Text="Вход" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <TextBox x:Name="TextBoxName" ToolTip="Введите имя пользователя, длина не менее 3 символов" materialDesign:HintAssist.Hint="Введите имя пользователя"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+                <TextBox x:Name="TextBoxLogin" ToolTip="Введите логин, длина более 8 символов" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+                <PasswordBox x:Name="TextBoxPassword" ToolTip="Введите пароль длине более 8 символов" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <Button Click="Button_Log_Click" Content="Войти в аккаунт" Margin="0 20" Cursor="Hand"/>
+                <Grid Margin="0 0 0 20">
+                    <Button Click="Button_Windows_Reg_Click" HorizontalAlignment="Left" Content="Регистрация" Style="{StaticResource MaterialDesignFlatButton}"/>
+                    <Button HorizontalAlignment="Right" Content="Войти" Cursor="Hand"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

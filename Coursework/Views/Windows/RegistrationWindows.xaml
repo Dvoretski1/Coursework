@@ -1,0 +1,27 @@
+﻿<Window x:Class="Coursework.Views.Windows.RegistrationWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coursework.Views.Windows"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="RegistrationWindows" Height="550" Width="800">
+    <Grid Background="#ffdadada">
+        <Border MinWidth="250" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="450" CornerRadius="20">
+            <StackPanel>
+                <TextBlock Text="Регистрация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <TextBox x:Name="TextBoxName" ToolTip="Введите имя пользователя, длина не менее 3 символов" materialDesign:HintAssist.Hint="Введите имя пользователя"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+                <TextBox x:Name="TextBoxLogin" ToolTip="Введите логин, длина не менее 7 символов" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+                <PasswordBox x:Name="TextBoxPassword" ToolTip="Введите пароль длине не менее 7 символов" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox x:Name="TextBoxPasswordRepeat" ToolTip="Повторите пароль" materialDesign:HintAssist.Hint="Повторите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <TextBox x:Name="TextBoxEmail" ToolTip="Введите Email, длина не менее 7 символов" materialDesign:HintAssist.Hint="Введите Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button Click="Button_Reg_Click" Content="Зарегистрироваться" Margin="0 20"/>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Регистрация"/>
+                    <Button Click="Button_Windows_Log_Click" HorizontalAlignment="Right" Content="Войти" Style="{StaticResource MaterialDesignFlatButton}" Cursor="Hand"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
